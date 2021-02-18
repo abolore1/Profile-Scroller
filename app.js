@@ -1,6 +1,4 @@
-// const data = [
-    
-  let data = [
+    let data = [
     {
         name: "Otutu Qudus",
         age: 37,
@@ -82,37 +80,3 @@ function profileIterator(profiles){
         }
     }
 }
-// ]
-
-// let profiles = profileIterator(data)
-// // calling it as not to display nothing before click next button
-// nextProfile()
-
-// document.getElementById('next').addEventListener('click',nextProfile)
-
-// function nextProfile(){
-//   let currentProfile = profiles.next().value
-//   if(currentProfile!==undefined){
-//   document.getElementById('profileDisplay').innerHTML = `
-//     <ul class="list-group">
-//       <li class="list-group-item">Name:${currentProfile.name}</li>
-//       <li class="list-group-item">Age:${currentProfile.age}</li>
-//       <li class="list-group-item">Gender:${currentProfile.gender}</li>
-//       <li class="list-group-item">Preference:${currentProfile.lookingfor}</li>
-//       <li class="list-group-item">Location:${currentProfile.location}</li>
-//     </ul>
-//   `;
-//   document.getElementById('imageDisplay').innerHTML = `<img src="${currentProfile.image}">`
-//   }else {window.location.reload()}
-// }
-
-// function profileIterator(profiles){
-//   let nextIndex = 0
-//   return{
-//     next:function(){
-//       return nextIndex < profiles.length?
-//       {value:profiles[nextIndex++], done:false}:{done:true}
-//     }
-//   }
-// }
-
