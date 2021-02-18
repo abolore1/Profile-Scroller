@@ -49,28 +49,32 @@
   }
   
 ]
-
+//passing JSON data
 let profiles = profileIterator(data)
+//Call first Profile 
 nextProfile()
-
+//Next event
 document.getElementById('next').addEventListener('click',nextProfile)
 
+//Next Profile Display
 function nextProfile(){
-    let currentProfile = profiles.next().value
+    let currentProfile = profiles.next().value //current profile value
+    //Displaying on DOM
      if(currentProfile!==undefined){
         document.getElementById('profileDisplay').innerHTML = `
         <ul class="list-group">
-        <li class="list-group-item">Name: ${currentProfile.name}</li>
-        <li class="list-group-item">Age: ${currentProfile.age}</li>
-        <li class="list-group-item">Gender: ${currentProfile.gender}</li>
-        <li class="list-group-item">I am ${currentProfile.gender} looking for ${currentProfile.preference}</li>
-        <li class="list-group-item">Location: ${currentProfile.location}</li>
+            <li class="list-group-item">Name: ${currentProfile.name}</li>
+            <li class="list-group-item">Age: ${currentProfile.age}</li>
+            <li class="list-group-item">Gender: ${currentProfile.gender}</li>
+            <li class="list-group-item">I am ${currentProfile.gender} looking for ${currentProfile.preference}</li>
+            <li class="list-group-item">Location: ${currentProfile.location}</li>
         </ul>`
-     document.getElementById('imageDisplay').innerHTML = `<img src="${currentProfile.image}" download>`
-    }else{ window.location.reload() }
+       document.getElementById('imageDisplay').innerHTML = `<img src="${currentProfile.image}">`
+    } else { //No more profile
+         window.location.reload() }
     
 }
-
+//Profile Iterator function
 function profileIterator(profiles){
     let nextIndex = 0;
     return{
