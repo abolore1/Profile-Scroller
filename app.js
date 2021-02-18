@@ -64,7 +64,7 @@ function nextProfile(){
         <li class="list-group-item">Age: ${currentProfile.age}</li>
         <li class="list-group-item">Gender: ${currentProfile.gender}</li>
         <li class="list-group-item">I am ${currentProfile.gender} looking for ${currentProfile.preference}</li>
-        <li class="list-group-item">Location: ${currentProfile.location} yes</li>
+        <li class="list-group-item">Location: ${currentProfile.location}</li>
         </ul>`
      document.getElementById('imageDisplay').innerHTML = `<img src="${currentProfile.image}" download>`
     }else{ window.location.reload() }
